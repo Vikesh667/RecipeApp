@@ -21,7 +21,7 @@ const Login=()=>{
   const onSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const res= await axios.post("https://recipeappnodejs-awlz.onrender.com/auth/login", 
+    const res= await axios.post("https://recipeappnodejs-awlz.onrender.com/login", 
       {username,
         password
       })
@@ -50,7 +50,7 @@ const Register=()=>{
 const onSubmit=async(e)=>{
   e.preventDefault();
   try{
-    await axios.post("https://recipeappnodejs-awlz.onrender.com/auth/register",
+    await axios.post("https://recipeappnodejs-awlz.onrender.com/register",
     {username,
       password
     })
