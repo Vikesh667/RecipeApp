@@ -82,11 +82,11 @@ const Form=({username,setUsername,password,setPassword,label,onSubmit})=>{
         </h2>
         <div >
           <label htmlFor='username'>Username:</label>
-          <input type='text' id="username" value={username} onChange={(event)=>setUsername(event.target.value)}/>
+          <input type='text' id="username" value={username} onChange={(event)=>setUsername(event.target.value)} autoComplete='off'/>
         </div>
         <div >
           <label htmlFor='password'>Password:</label>
-          <input type='text' id="password" value={password} onChange={(event)=>setPassword(event.target.value)}/>
+          <input type='password' id="password" value={password} onChange={(event)=>setPassword(event.target.value)} autoComplete='off'/>
         </div>
         <button type='submit'>{label}</button>
       </form>
