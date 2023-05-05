@@ -30,7 +30,7 @@ const CreateRecipes = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axiso.post("http://localhost:5001/recipes", recipe);
+      await axiso.post("https://recipeappnodejs-awlz.onrender.com/recipes", recipe);
       alert("Recipe created Successful");
       navigate("/");
     } catch (err) {
