@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(()=>{
   const fetchRecipe=async()=>{
     try{
-   const res= await axiso.get("https://recipeappnodejs-awlz.onrender.com/recipes") 
+   const res= await axiso.get("http://localhost:5001/recipes")
      setRecipes(res.data)  
 
     }catch(err){
@@ -20,7 +20,7 @@ const Home = () => {
   }
   const fetchSavedRecipe=async()=>{
  try{
-  const res= await axiso.get(`https://recipeappnodejs-awlz.onrender.com/recipes/savedRecipes/ids/${userID}`)
+  const res= await axiso.get(`http://localhost:5001/recipes/savedRecipes/ids/${userID}`)
   setSavedRecipes(res.data.savedRecipes)
  }catch(err){
   console.error(err)
@@ -33,7 +33,7 @@ const Home = () => {
 
    const saveRecipe=async(recipeID)=>{
     try{
-      const res= await axiso.put("https://recipeappnodejs-awlz.onrender.com/recipes",{
+      const res= await axiso.put("http://localhost:5001/recipes",{
         recipeID,
         userID
       },

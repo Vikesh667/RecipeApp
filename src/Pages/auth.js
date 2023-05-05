@@ -21,7 +21,7 @@ const Login=()=>{
   const onSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const res= await axios.post("https://recipeappnodejs-awlz.onrender.com/auth/login", 
+    const res= await axios.post("http://localhost:5001/auth/login",
       {username,
         password
       })
@@ -50,7 +50,7 @@ const Register=()=>{
 const onSubmit=async(e)=>{
   e.preventDefault();
   try{
-    await axios.post("https://recipeappnodejs-awlz.onrender.com/auth/register",
+    await axios.post("http://localhost:5001/auth/register",
     {username,
       password
     })
@@ -82,11 +82,11 @@ const Form=({username,setUsername,password,setPassword,label,onSubmit})=>{
         </h2>
         <div >
           <label htmlFor='username'>Username:</label>
-          <input type='text' id="username" value={username} onChange={(event)=>setUsername(event.target.value)} autoComplete='off'/>
+          <input type='text' id="username" value={username} onChange={(event)=>setUsername(event.target.value)}/>
         </div>
         <div >
           <label htmlFor='password'>Password:</label>
-          <input type='password' id="password" value={password} onChange={(event)=>setPassword(event.target.value)} autoComplete='off'/>
+          <input type='text' id="password" value={password} onChange={(event)=>setPassword(event.target.value)}/>
         </div>
         <button type='submit'>{label}</button>
       </form>
