@@ -21,7 +21,7 @@ const Login=()=>{
   const onSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const res= await axios.post("http://localhost:5001/auth/login",
+    const res= await axios.post("http://localhost:5001/auth/login", 
       {username,
         password
       })
